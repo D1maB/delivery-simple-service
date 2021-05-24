@@ -22,6 +22,11 @@ abstract class BaseRepository{
         return $this->model::findOrFail($id);
     }
 
+    public function findMany(array $ids)
+    {
+        return $this->model::findMany($ids);
+    }
+
     public function findOneBy($data)
     {
         return $this->model::where($data)->firstOrFail();

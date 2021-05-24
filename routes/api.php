@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+/* TODO Refactor namespaces to groupped use declaration */
+
 use App\Http\Controllers\API\Restaurant\CreateRestaurantController;
 use App\Http\Controllers\API\Restaurant\UpdateRestaurantController;
 use App\Http\Controllers\API\Restaurant\ShowRestaurantController;
@@ -14,6 +16,8 @@ use App\Http\Controllers\API\Product\UpdateProductController;
 use App\Http\Controllers\API\Product\ShowProductController;
 use App\Http\Controllers\API\Product\ListProductController;
 use App\Http\Controllers\API\Product\DeleteProductController;
+
+use App\Http\Controllers\API\Order\CreateOrderController;
 
 
 /*
@@ -40,3 +44,6 @@ Route::put('/product/{id}', UpdateProductController::class);
 Route::get('/product/{id}', ShowProductController::class);
 Route::get('/product', ListProductController::class);
 Route::delete('/product/{id}', DeleteProductController::class);
+
+// orders
+Route::post('/order', CreateOrderController::class);

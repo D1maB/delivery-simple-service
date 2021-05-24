@@ -46,6 +46,7 @@ abstract class CrudServiceBase
     abstract function repository();
 
     private function getRepository(){
+
         return resolve($this->repository());
     }
 }

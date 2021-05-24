@@ -26,7 +26,7 @@ class UpdateProductRequest extends FormRequest
         return [
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required',
+            'price' => 'required|integer',
             'restaurant_id' => 'required|exists:App\Models\Restaurant,id',
         ];
     }
