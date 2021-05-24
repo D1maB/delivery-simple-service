@@ -3,6 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\API\Restaurant\CreateRestaurantController;
+use App\Http\Controllers\API\Restaurant\UpdateRestaurantController;
+use App\Http\Controllers\API\Restaurant\ShowRestaurantController;
+use App\Http\Controllers\API\Restaurant\ListRestaurantController;
+use App\Http\Controllers\API\Restaurant\DeleteRestaurantController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/* restaurants */
+Route::post('/restaurant', CreateRestaurantController::class);
+Route::put('/restaurant/{id}', UpdateRestaurantController::class);
+Route::get('/restaurant/{id}', ShowRestaurantController::class);
+Route::get('/restaurant', ListRestaurantController::class);
+Route::delete('/restaurant/{id}', DeleteRestaurantController::class);
