@@ -35,5 +35,15 @@ services:
     volumes:
       - db-data:/var/lib/mysql
 
+  db-testing:
+    image: mariadb:10.5
+    container_name: app-db-testing
+    restart: always
+    environment:
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${DB_USERNAME}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+
 volumes:
   db-data:

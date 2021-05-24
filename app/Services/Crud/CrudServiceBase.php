@@ -23,7 +23,6 @@ abstract class CrudServiceBase
         return $this->repository->find($id);
     }
 
-
     public function create($data)
     {
         return $this->repository->create($data);

@@ -32,18 +32,18 @@ use App\Http\Controllers\API\Order\CreateOrderController;
 */
 
 /* restaurants */
-Route::post('/restaurant', CreateRestaurantController::class);
-Route::put('/restaurant/{id}', UpdateRestaurantController::class);
-Route::get('/restaurant/{id}', ShowRestaurantController::class);
-Route::get('/restaurant', ListRestaurantController::class);
-Route::delete('/restaurant/{id}', DeleteRestaurantController::class);
+Route::post('/restaurant', CreateRestaurantController::class)->name('restaurant.create');
+Route::put('/restaurant/{id}', UpdateRestaurantController::class)->name('restaurant.update');
+Route::get('/restaurant/{id}', ShowRestaurantController::class)->name('restaurant.show');
+Route::get('/restaurant', ListRestaurantController::class)->name('restaurant.list');
+Route::delete('/restaurant/{id}', DeleteRestaurantController::class)->name('restaurant.delete');
 
 /* products */
-Route::post('/product', CreateProductController::class);
-Route::put('/product/{id}', UpdateProductController::class);
-Route::get('/product/{id}', ShowProductController::class);
-Route::get('/product', ListProductController::class);
-Route::delete('/product/{id}', DeleteProductController::class);
+Route::post('/product', CreateProductController::class)->name('product.create');
+Route::put('/product/{id}', UpdateProductController::class)->name('product.update');
+Route::get('/product/{id}', ShowProductController::class)->name('product.show');
+Route::get('/product', ListProductController::class)->name('product.list');
+Route::delete('/product/{id}', DeleteProductController::class)->name('product.delete');
 
 // orders
-Route::post('/order', CreateOrderController::class);
+Route::post('/order', CreateOrderController::class)->name('order.create');
