@@ -95,7 +95,7 @@ class CreateProductControllerTest extends TestCase
             'name' => 'test name',
             'description' => 'test description',
             'price' => 1000,
-            'restaurant_is' => 9999
+            'restaurant_id' => 9999
         ];
 
         $response = $this->post(route('product.create'), $data);
