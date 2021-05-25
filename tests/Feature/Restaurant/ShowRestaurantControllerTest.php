@@ -18,7 +18,8 @@ class ShowRestaurantControllerTest extends TestCase
 
         $response->assertJson(['data' => [
             "name" => $restaurant->name,
-            "description" => $restaurant->description
+            "description" => $restaurant->description,
+            "products" => []
         ] ]);
 
         $response->assertStatus(200);

@@ -10,7 +10,7 @@ class ShowRestaurantController extends Controller
 {
     public function __invoke(RestaurantService $restaurantService, $id)
     {
-        $response = $restaurantService->find($id);
+        $response = $restaurantService->findFull($id);
 
         return new RestaurantResource($response);
     }

@@ -14,4 +14,8 @@ class Product extends Model
     public function details(){
         return $this->hasMany(OrderDetail::class);
     }
+
+    public function restaurant(){
+        return $this->hasMany(Restaurant::class);
+    }
 }

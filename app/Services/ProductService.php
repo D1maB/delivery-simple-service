@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Repositories\OrderRepository;
 use App\Repositories\ProductRepository;
 use App\Services\Crud\CrudServiceBase;
 
